@@ -158,15 +158,9 @@ Self_Employed = st.sidebar.radio(
 ApplicantIncome = st.sidebar.select_slider(
     'Applicant income',
      ['Unknown']+[i for i in range(10001)])
-CoapplicantIncome = st.sidebar.select_slider(
-    'Coapplicant income',
-     ['Unknown']+[i for i in range(5001)])
 LoanAmount = st.sidebar.select_slider(
     'Loan amount (in thousands)',
      ['Unknown']+[i for i in range(301)])
-Dependents = st.sidebar.select_slider(
-    'Number of dependants',
-     ['Unknown']+sorted(list(df['Dependents'].unique())))
 Property_Area = st.sidebar.radio(
     'Habitation area',
     ['Unknown']+list(df['Property_Area'].unique()))
@@ -181,11 +175,11 @@ df_x = pd.DataFrame({
     "Loan_ID" : [None],
     "Gender" : [Gender],
     "Married" : [Married],
-    "Dependents" : [Dependents],
+    "Dependents" : [None],
     "Education" : [Education],
     "Self_Employed" : [Self_Employed],
     "ApplicantIncome" : [ApplicantIncome],
-    "CoapplicantIncome" : [CoapplicantIncome],
+    "CoapplicantIncome" : [None],
     "LoanAmount" : [LoanAmount],
     "Loan_Amount_Term" : [360],
     "Credit_History" : [None],
@@ -207,7 +201,7 @@ st.plotly_chart(fig3)
 
 
 
-expander = st.beta_expander("Motivation")
+expander = st.beta_expander("More about this project")
 expander.write("Problem and dataset come from the Loan prediction analytics vidhya competition")
 expander.write("The solution ranks top 0.25% (22/9168)")
 
