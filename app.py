@@ -165,11 +165,11 @@ Property_Area = st.sidebar.radio(
     'Habitation area',
     ['Unknown']+list(df['Property_Area'].unique()))
 
-l = [Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Property_Area]
+l = [Gender, Married, Education, Self_Employed, ApplicantIncome, LoanAmount, Property_Area]
 for i in range(len(l)):
     if l[i] == 'Unknown':
         l[i] = None
-[Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Property_Area] = l
+[Gender, Married, Education, Self_Employed, ApplicantIncome, LoanAmount, Property_Area] = l
 
 df_x = pd.DataFrame({
     "Loan_ID" : [None],
