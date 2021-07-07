@@ -1,10 +1,8 @@
-
 # Data structures
 import pandas as pd
 import numpy as np
 
 # Viz
-import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
 
@@ -13,43 +11,12 @@ import streamlit as st
 from sklearn.pipeline import make_pipeline
 
 # preprocessing
-from sklearn.preprocessing import PolynomialFeatures
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import f_classif
-from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.impute import KNNImputer
-from sklearn.decomposition import PCA
-from scipy import stats
-import pickle
-
-
-# Evaluation
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import f1_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
-from sklearn.model_selection import learning_curve
-
-# Classification
-from sklearn.ensemble import BaggingClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.ensemble import VotingClassifier
-from sklearn.svm import SVC
-from sklearn.linear_model import SGDClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-
-import warnings
-warnings.simplefilter("ignore")
+import pickle
 
 
 #####################################################################################################################################################
